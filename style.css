@@ -256,7 +256,7 @@ span {
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(4, 2fr);
   align-items: center;
   gap: 3rem;
 }
@@ -301,12 +301,12 @@ span {
 
 .portfolio-layer h4 {
   font-size: 3rem;
-  color: var(--snd-bg-color);
+  color: var(--main-color);
   font-weight: 500;
 }
 
 .portfolio-layer p {
-  color: var(--snd-bg-color);
+  color: var(--main-color);
   font-size: 1.8rem;
   margin: 0.3rem 0 0.5rem;
   font-weight: 500;
@@ -324,8 +324,8 @@ span {
 
 .portfolio-layer i {
   font-size: 3rem;
-  color: var(--bg-color);
-  background: var(--text-color);
+  color: var(--main-color);
+  background: var(--snd-bg-color);
   border-radius: 50%;
   padding: 10px;
   font-weight: 600;
