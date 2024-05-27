@@ -61,9 +61,43 @@ const typed = new Typed(".multiple-text", {
     "Website Designer",
     "Content creator",
     "Physiotherapist",
+    "Go-to Virtual Assistance",
   ],
   typeSpeed: 70,
   backSpeed: 70,
   backDelay: 1000,
   loop: true,
+});
+
+document.getElementById("downloadBtn").addEventListener("click", function () {
+  // Array of CV URLs
+  const cvUrls = [
+    "CV/Frontend  CV.pdf",
+    "CV/Virtual Assistant.pdf",
+    "CV/Physiotherapy Curriculum vitae.pdf",
+    "CV/Writing CV.pdf",
+  ];
+
+  // Corresponding filenames for the CVs
+  const filenames = [
+    "Frontend  CV.pdf",
+    "Virtual Assistant.pdf",
+    "Physiotherapy Curriculum vitae.pdf",
+    "Writing CV.pdf",
+  ];
+
+  // Function to download a single CV
+  function downloadCV(url, filename) {
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  // Download each CV with the specified filename
+  for (let i = 0; i < cvUrls.length; i++) {
+    downloadCV(cvUrls[i], filenames[i]);
+  }
 });
